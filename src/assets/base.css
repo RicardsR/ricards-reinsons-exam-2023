@@ -1,0 +1,86 @@
+/* color palette */
+:root {
+    --c-white: #ffffff;
+    --c-dark: #1a1622;
+    --c-primary: #9040f1;
+    --c-secondary: #46404c;
+    --c-accent: #a978ff;
+    --c-accent-secondary: #ff4788;
+    --c-accent-alternate: #3fff78;
+}
+
+/* semantic color variables for this project */
+:root {
+    --height-main-header: 70px;
+    --height-audio-player: 90px;
+    --height-section-body: calc(100vh - (var(--height-main-header) + var(--height-audio-player)));
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--c-white);
+    background: var(--c-dark);
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+div {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button:active {
+    opacity: .8;
+}
+
+input {
+    outline: none;
+    border: .1rem solid var(--c-secondary);
+    background-color: var(--c-secondary);
+    color: var(--c-white);
+    transition: all .5s;
+}
+
+input:active, input:focus {
+    border-color: var(--c-accent);
+}
+
+/* AUDIO PLAYER */
+audio {
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid var(--c-accent)
+}
